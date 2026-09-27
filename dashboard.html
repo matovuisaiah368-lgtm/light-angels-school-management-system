@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Dashboard | Light Angels Primary School</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background: #f4f6f9;
+    }
+
+    /* TOP BAR */
+    .topbar {
+        height: 65px;
+        background: #0d47a1;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 25px;
+    }
+
+    .topbar h2 {
+        font-size: 20px;
+    }
+
+    .logout {
+        background: white;
+        color: #0d47a1;
+        border: none;
+        padding: 9px 16px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    /* LAYOUT */
+    .layout {
+        display: flex;
+        min-height: calc(100vh - 65px);
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+        width: 230px;
+        background: white;
+        border-right: 1px solid #ddd;
+        padding: 20px 0;
+    }
+
+    .sidebar h3 {
+        color: #0d47a1;
+        padding: 0 20px 20px;
+    }
+
+    .sidebar a {
+        display: block;
+        padding: 13px 20px;
+        text-decoration: none;
+        color: #333;
+        font-size: 15px;
+    }
+
+    .sidebar a:hover {
+        background: #e3f2fd;
+        color: #0d47a1;
+    }
+
+    .sidebar .active {
+        background: #e3f2fd;
+        color: #0d47a1;
+        font-weight: bold;
+        border-left: 4px solid #0d47a1;
+    }
+
+    /* MAIN CONTENT */
+    .main {
+        flex: 1;
+        padding: 30px;
+    }
+
+    .welcome {
+        background: white;
+        padding: 25px;
+        border-radius: 10px;
+        margin-bottom: 25px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .welcome h1 {
+        color: #0d47a1;
+        margin-bottom: 8px;
+    }
+
+    .welcome p {
+        color: #666;
+    }
+
+    /* STATISTICS */
+    .stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .stat-card {
+        background: white;
+        padding: 22px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .stat-card h3 {
+        color: #555;
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .stat-card .number {
+        color: #0d47a1;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    /* QUICK ACTIONS */
+    .section-title {
+        color: #0d47a1;
+        margin-bottom: 15px;
+    }
+
+    .actions {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 15px;
+    }
+
+    .action {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-decoration: none;
+        color: #333;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        transition: 0.2s;
+    }
+
+    .action:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 12px rgba(0,0,0,0.10);
+    }
+
+    .action strong {
+        display: block;
+        color: #0d47a1;
+        margin-bottom: 7px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 700px) {
+
+        .sidebar {
+            width: 65px;
+        }
+
+        .sidebar h3 {
+            display: none;
+        }
+
+        .sidebar a {
+            text-align: center;
+            padding: 15px 5px;
+            font-size: 20px;
+        }
+
+        .sidebar a span {
+            display: none;
+        }
+
+        .main {
+            padding: 20px;
+        }
+
+        .topbar h2 {
+            font-size: 16px;
+        }
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+
+```
+<h2>Light Angels Primary School</h2>
+
+<button class="logout" onclick="logout()">
+    Logout
+</button>
+```
+
+</div>
+
+<div class="layout">
+
+```
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+    <h3>MENU</h3>
+
+    <a href="dashboard.html" class="active">
+        📊 <span>Dashboard</span>
+    </a>
+
+    <a href="#">
+        👨‍🎓 <span>Learners</span>
+    </a>
+
+    <a href="#">
+        👩‍🏫 <span>Teachers</span>
+    </a>
+
+    <a href="#">
+        🏫 <span>Classes</span>
+    </a>
+
+    <a href="#">
+        📚 <span>Subjects</span>
+    </a>
+
+    <a href="#">
+        📝 <span>Marks</span>
+    </a>
+
+    <a href="#">
+        📄 <span>Reports</span>
+    </a>
+
+    <a href="#">
+        ⚙️ <span>Settings</span>
+    </a>
+
+</aside>
+
+
+<!-- MAIN CONTENT -->
+
+<main class="main">
+
+    <div class="welcome">
+
+        <h1>Welcome, Headteacher</h1>
+
+        <p>
+            Manage learners, teachers, classes, marks and
+            academic reports from one place.
+        </p>
+
+    </div>
+
+
+    <!-- STATISTICS -->
+
+    <div class="stats">
+
+        <div class="stat-card">
+
+            <h3>Total Learners</h3>
+
+            <div class="number">
+                600
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <h3>Total Teachers</h3>
+
+            <div class="number">
+                11
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <h3>Classes</h3>
+
+            <div class="number">
+                7
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <h3>Subjects</h3>
+
+            <div class="number">
+                10
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- QUICK ACTIONS -->
+
+    <h2 class="section-title">
+        Quick Actions
+    </h2>
+
+    <div class="actions">
+
+        <a href="#" class="action">
+
+            <strong>👨‍🎓 Add Learner</strong>
+
+            Register a new learner.
+
+        </a>
+
+
+        <a href="#" class="action">
+
+            <strong>👩‍🏫 Add Teacher</strong>
+
+            Register a teacher.
+
+        </a>
+
+
+        <a href="#" class="action">
+
+            <strong>📝 Enter Marks</strong>
+
+            Enter examination marks.
+
+        </a>
+
+
+        <a href="#" class="action">
+
+            <strong>📄 Generate Report</strong>
+
+            Create academic reports.
+
+        </a>
+
+    </div>
+
+</main>
+```
+
+</div>
+
+<script>
+
+    function logout() {
+
+        window.location.href = "login.html";
+
+    }
+
+</script>
+
+</body>
+</html>
