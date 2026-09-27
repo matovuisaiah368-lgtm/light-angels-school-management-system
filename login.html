@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Login | Light Angels Primary School</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #0d47a1, #1976d2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .login-container {
+        width: 100%;
+        max-width: 420px;
+        background: white;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .school-logo {
+        width: 80px;
+        height: 80px;
+        background: #0d47a1;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    h1 {
+        text-align: center;
+        color: #0d47a1;
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+
+    .subtitle {
+        text-align: center;
+        color: #666;
+        margin-bottom: 30px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    input,
+    select {
+        width: 100%;
+        padding: 13px;
+        border: 1px solid #ccc;
+        border-radius: 7px;
+        font-size: 15px;
+        outline: none;
+    }
+
+    input:focus,
+    select:focus {
+        border-color: #1976d2;
+    }
+
+    .login-btn {
+        width: 100%;
+        padding: 14px;
+        background: #0d47a1;
+        color: white;
+        border: none;
+        border-radius: 7px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .login-btn:hover {
+        background: #083b88;
+    }
+
+    .forgot {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        color: #1976d2;
+        text-decoration: none;
+    }
+
+    .back-home {
+        display: block;
+        text-align: center;
+        margin-top: 15px;
+        color: #555;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .footer {
+        text-align: center;
+        margin-top: 25px;
+        color: #777;
+        font-size: 13px;
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+<div class="login-container">
+
+```
+<div class="school-logo">
+    LA
+</div>
+
+<h1>Light Angels Primary School</h1>
+
+<p class="subtitle">
+    School Management System
+</p>
+
+<form>
+
+    <div class="form-group">
+        <label for="role">Login As</label>
+
+        <select id="role">
+            <option value="admin">Headteacher / Admin</option>
+            <option value="teacher">Teacher</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="username">Username</label>
+
+        <input
+            type="text"
+            id="username"
+            placeholder="Enter your username"
+            required
+        >
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password</label>
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+            required
+        >
+    </div>
+
+    <button type="submit" class="login-btn">
+        LOGIN
+    </button>
+
+</form>
+
+<a href="#" class="forgot">
+    Forgot password?
+</a>
+
+<a href="index.html" class="back-home">
+    ← Back to Home
+</a>
+
+<div class="footer">
+    © 2026 Light Angels Primary School
+</div>
+```
+
+</div>
+
+</body>
+</html>
